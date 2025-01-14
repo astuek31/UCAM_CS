@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version"
+
+build:
+  stage: build
+  image: maven:3.8.1-jdk-11
+  script:
+    - mvn $MAVEN_CLI_OPTS clean compile
+
+test:
+  stage: test
+  image: maven:3.8.1-jdk-11
+  script:
+    - mvn $MAVEN_CLI_OPTS test
+    - mvn $MAVEN_CLI_OPTS checkstyle:check
+
+deploy:
+  stage: deploy
+  image: maven:3.8.1-jdk-11
+  script:
+    - mvn $MAVEN_CLI_OPTS deploy
+  only:
+    - main
