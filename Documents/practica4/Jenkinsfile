@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        githubPush() // Esta línea activa el webhook de GitHub
+        githubPush() // <- Añadido para asegurar que el Webhook se reconozca
     }
     stages {
         stage('Checkout') {
@@ -13,19 +13,6 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
-        }
-        stage('Test') {
-            steps {
-                sh 'mvn test' // Añadido un paso de prueba
-            }
-        }
-    }
-    post {
-        success {
-            echo 'Build completado con éxito'
-        }
-        failure {
-            echo 'El build ha fallado'
         }
     }
 }
