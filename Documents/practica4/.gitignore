@@ -54,3 +54,4 @@ Thumbs.db
 *.bak
 *.tmp
 *.temp
+ci_settings.xml
