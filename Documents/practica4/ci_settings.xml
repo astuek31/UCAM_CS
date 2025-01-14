@@ -1,0 +1,9 @@
+<settings>
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <username>${GITLAB_USERNAME}</username>
+            <password>${GITLAB_TOKEN}</password>
+        </server>
+    </servers>
+</settings>

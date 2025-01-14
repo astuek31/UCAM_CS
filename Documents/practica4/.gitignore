@@ -1,0 +1,56 @@
+
+# Directorios y archivos de Maven
+target/
+*.log
+*.swp
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Archivos de configuración de Maven
+.settings/
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
+
+# IDEs y entornos de desarrollo
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos de CI/CD y credenciales sensibles
+ci_settings.xml
+**/ci_settings.xml
+.gitlab-ci.yml
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.bak
+*~
+
+# Archivos de dependencias descargadas y cache
+**/node_modules/
+**/.maven/
+**/.cache/
+**/.gradle/
+**/.idea/
+
+# Otros archivos y carpetas de backup
+*.bak
+*.tmp
+*.temp
