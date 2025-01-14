@@ -1,0 +1,9 @@
+<settings>
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <username>astuek3</username>
+            <password>glpat-nrpjtfYxySWzYz14xfSD</password>
+        </server>
+    </servers>
+</settings>
