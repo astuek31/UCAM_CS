@@ -10,18 +10,26 @@
 
     <!-- Dependencias -->
     <dependencies>
-        <!-- Dependencia de JUnit para realizar pruebas -->
+        <!-- Dependencia de JUnit para realizar pruebas unitarias -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.2</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Dependencia para el análisis de código con SonarQube -->
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
         </dependency>
     </dependencies>
 
     <!-- Configuración de compilación -->
     <build>
         <plugins>
+            <!-- Plugin de compilación de Maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -31,8 +39,30 @@
                     <target>17</target> <!-- Versión de Java para los binarios -->
                 </configuration>
             </plugin>
+
+            <!-- Plugin para ejecutar análisis con SonarQube -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
+
+            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <altDeploymentRepository>jfrog-release::default::https://tu-jfrog-instance/artifactory/libs-release</altDeploymentRepository>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-</project>
 
-        <!--prueba -->
+    <!-- Configuración de SonarQube -->
+    <properties>
+        <sonar.projectKey>tu-proyecto</sonar.projectKey> <!-- Cambia esto por tu clave de proyecto -->
+        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Cambia la URL si usas SonarCloud -->
+        <sonar.login>${env.SONAR_TOKEN}</sonar.login> <!-- Token de autenticación -->
+    </properties>
+</project>
