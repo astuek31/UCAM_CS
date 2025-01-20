@@ -61,12 +61,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.1.2</version> <!-- Cambia a esta versión -->
                 <configuration>
-                    <configLocation>google_checks.xml</configLocation> <!-- Usa reglas de Google -->
+                    <configLocation>google_checks.xml</configLocation>
                     <encoding>UTF-8</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation> <!-- Falla si hay errores -->
+                    <failOnViolation>true</failOnViolation>
                 </configuration>
             </plugin>
 
