@@ -59,7 +59,7 @@
         </plugins>
     </build>
 
-    <!-- Configuración de SonarQube -->
+    <!-- Configuración de SonarQube 1-->
     <properties>
         <sonar.projectKey>tu-proyecto</sonar.projectKey> <!-- Cambia esto por tu clave de proyecto -->
         <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Cambia la URL si usas SonarCloud -->
