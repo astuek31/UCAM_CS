@@ -56,13 +56,22 @@
                     <altDeploymentRepository>jfrog-release::default::https://tu-jfrog-instance/artifactory/libs-release</altDeploymentRepository>
                 </configuration>
             </plugin>
+
+            <!-- Checkstyle Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <configLocation>google_checks.xml</configLocation> <!-- Usa reglas de Google -->
+                    <encoding>UTF-8</encoding>
+                    <consoleOutput>true</consoleOutput>
+                    <failOnViolation>true</failOnViolation> <!-- Falla si hay errores -->
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
-    <!-- Configuración de SonarQube 1-->
-    <properties>
-        <sonar.projectKey>tu-proyecto</sonar.projectKey> <!-- Cambia esto por tu clave de proyecto -->
-        <sonar.host.url>http://localhost:9000</sonar.host.url> <!-- Cambia la URL si usas SonarCloud -->
-        <sonar.login>${env.SONAR_TOKEN}</sonar.login> <!-- Token de autenticación -->
-    </properties>
+
 </project>
