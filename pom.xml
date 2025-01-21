@@ -59,7 +59,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.8.6.4</version>
+                <version>4.7.3</version> <!-- Cambiar a una versión válida -->
                 <configuration>
                     <includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
                     <excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
@@ -73,25 +73,11 @@
                 </configuration>
             </plugin>
 
-
         </plugins>
 
 
     </build>
 
-    <reporting>
-        <!-- Informe errores Spotbugs -->
-        <plugins>
-            <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.8.6.4</version>
-                <configuration>
-                    <jvmArgs>-Duser.language=en</jvmArgs>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 
 
 </project>
