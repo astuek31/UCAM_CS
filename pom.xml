@@ -21,6 +21,10 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/releases/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -51,7 +55,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.7.3</version>
+                <version>4.7.2.0</version>
                 <configuration>
                     <effort>Max</effort>
                     <threshold>Low</threshold>
