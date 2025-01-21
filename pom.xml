@@ -63,7 +63,7 @@
                 <version>3.9.1.2184</version>
             </plugin>
 
-            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory11 -->
+            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
