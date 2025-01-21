@@ -23,7 +23,7 @@
 
     <!-- Dependencias 12-->
     <dependencies>
-        <!-- Dependencia de JUnit para realizar pruebas unitarias -1->
+        <!-- Dependencia de JUnit para realizar pruebas unitarias 1 -->
 
     <!-- Dependencia de JUnit 5 -->
         <dependency>
