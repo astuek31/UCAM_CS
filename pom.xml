@@ -12,7 +12,14 @@
     <repositories>
         <repository>
             <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
+            <url>https://repo1.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <repositories>
+        <repository>
+            <id>plugins</id>
+            <url>https://repo1.maven.org/maven2/com/github/</url>
         </repository>
     </repositories>
 
