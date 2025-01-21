@@ -13,9 +13,8 @@ public class Biblioteca {
     public void agregarLibro(Libro libro) {
         libros.add(libro);
     }
-    
 
     public List<Libro> listarLibros() {
-        return libros;
+        return new ArrayList<>(libros); // Devuelve una copia de la lista
     }
 }
