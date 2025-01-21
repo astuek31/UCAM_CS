@@ -24,12 +24,15 @@
     <!-- Dependencias 12-->
     <dependencies>
         <!-- Dependencia de JUnit para realizar pruebas unitarias -1->
+
+    <!-- Dependencia de JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.9.2</version>
+            <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
+    </dependencies>
 
         <!- Dependencia para el análisis de código con SonarQube -->
         <dependency>
