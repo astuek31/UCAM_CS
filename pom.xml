@@ -61,7 +61,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.7.3.0</version>
+                <version>4.7.3</version> <!-- Cambiado a la versión correcta -->
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -71,9 +71,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <effort>Max</effort> <!-- Esfuerzo de análisis: Min, Default, Max -->
-                    <threshold>Low</threshold> <!-- Umbral de severidad: High, Medium, Low -->
-                    <failOnError>true</failOnError> <!-- Fallar en caso de errores -->
+                    <effort>Max</effort>
+                    <threshold>Low</threshold>
+                    <failOnError>true</failOnError>
                 </configuration>
             </plugin>
 
