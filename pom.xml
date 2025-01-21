@@ -34,7 +34,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Dependencia para el análisis de código con SonarQube -->
+        <!- Dependencia para el análisis de código con SonarQube -->
         <dependency>
             <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
