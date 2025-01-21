@@ -21,7 +21,7 @@
     </repositories>
 
 
-    <!-- Dependencias q-->
+    <!-- Dependencias 11-->
     <dependencies>
         <!-- Dependencia de JUnit para realizar pruebas unitarias -1->
         <dependency>
