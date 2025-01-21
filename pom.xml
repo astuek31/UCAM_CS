@@ -26,7 +26,7 @@
         </dependency>
     </dependencies>
 
-    <!-- Configuración de compilación 22-->
+    <!-- Configuración de compilación -->
     <build>
         <plugins>
             <!-- Plugin de compilación de Maven -->
@@ -57,18 +57,26 @@
                 </configuration>
             </plugin>
 
-            <!-- Checkstyle Plugin 11-->
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.1.2</version>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.7.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>spotbugs</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <configLocation>google_checks.xml</configLocation>
-                    <encoding>UTF-8</encoding>
-                    <consoleOutput>true</consoleOutput>
-                    <failOnViolation>true</failOnViolation>
+                    <effort>Max</effort> <!-- Esfuerzo de análisis: Min, Default, Max -->
+                    <threshold>Low</threshold> <!-- Umbral de severidad: High, Medium, Low -->
+                    <failOnError>true</failOnError> <!-- Fallar en caso de errores -->
                 </configuration>
             </plugin>
+
 
         </plugins>
     </build>
