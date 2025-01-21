@@ -56,7 +56,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Plugin para ejecutar análisis con SonarQube -->
+            <!-- Plugin para ejecutar análisis con SonarQube1 -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
@@ -76,7 +76,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.7.2</version> <!-- Versión anterior -->
+                <version>4.7.2.2</version> <!-- Versión anterior -->
                 <executions>
                     <execution>
                         <phase>verify</phase>
