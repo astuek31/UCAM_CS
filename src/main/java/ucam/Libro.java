@@ -13,7 +13,7 @@ public class Libro {
         return titulo;
     }
 
-    public String getAutor() { // Mantén este método si planeas usarlo en el futuro
+    public String getAutor() {
         return autor;
     }
 
