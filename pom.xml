@@ -3,60 +3,80 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>UCAM</groupId>
-    <artifactId>UCAM-CS</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <!-- Información básica del proyecto -->
+    <groupId>com.tu.proyecto</groupId> <!-- Cambia esto por tu grupo -->
+    <artifactId>mi-proyecto</artifactId> <!-- Cambia esto por tu nombre de proyecto -->
+    <version>1.0.0</version>
 
-    <name>UCAM</name>
-    <url>http://maven.apache.org</url>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
+    <repositories>
+        <repository>
+            <id>plugins</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
+
+    <!-- Dependencias -->
     <dependencies>
+        <!-- Dependencia de JUnit para realizar pruebas unitarias -1->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.2</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Dependencia para el análisis de código con SonarQube -->
+        <dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.9.1.2184</version>
         </dependency>
     </dependencies>
 
+    <!-- Configuración de compilación -->
     <build>
         <plugins>
+            <!-- Plugin de compilación de Maven -->
             <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.8.6.4</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version> <!-- Versión reciente del plugin -->
                 <configuration>
-                    <includeFilterFile>spotbugs-security-include.xml</includeFilterFile>
-                    <excludeFilterFile>spotbugs-security-exclude.xml</excludeFilterFile>
-                    <plugins>
-                        <plugin>
-                            <groupId>com.h3xstream.findsecbugs</groupId>
-                            <artifactId>findsecbugs-plugin</artifactId>
-                            <version>1.12.0</version>
-                        </plugin>
-                    </plugins>
+                    <source>17</source> <!-- Versión de Java para el código fuente -->
+                    <target>17</target> <!-- Versión de Java para los binarios -->
                 </configuration>
             </plugin>
+
+            <!-- Plugin para ejecutar análisis con SonarQube1 -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
+
+            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <altDeploymentRepository>jfrog-release::default::https://tu-jfrog-instance/artifactory/libs-release</altDeploymentRepository>
+                </configuration>
+            </plugin>
+
         </plugins>
+
+
     </build>
 
-    <reporting>
-        <!-- Informe errores Spotbugs -->
-        <plugins>
-            <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.8.6.4</version>
-                <configuration>
-                    <jvmArgs>-Duser.language=en</jvmArgs>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 
 </project>
