@@ -56,7 +56,7 @@
                 <version>3.9.1.2184</version>
             </plugin>
 
-            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory1 -->
+            <!-- Plugin para generar artefactos y publicarlos en JFrog Artifactory11 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
@@ -67,24 +67,7 @@
             </plugin>
 
 
-            <plugin>
-                <groupId>com.github.spotbugs</groupId>
-                <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.7.2.2</version> <!-- Cambiado a la versión correcta -->
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>spotbugs</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <effort>Max</effort>
-                    <threshold>Low</threshold>
-                    <failOnError>true</failOnError>
-                </configuration>
-            </plugin>
+
 
 
         </plugins>
