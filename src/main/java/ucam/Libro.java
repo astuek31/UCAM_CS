@@ -1,8 +1,8 @@
 package ucam;
 
 public class Libro {
-    private String titulo;
-    private String autor;
+    private final String titulo;
+    private final String autor;
 
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
@@ -13,7 +13,7 @@ public class Libro {
         return titulo;
     }
 
-    public String getAutor() {
+    public String getAutor() { // Mantén este método si planeas usarlo en el futuro
         return autor;
     }
 
