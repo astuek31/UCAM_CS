@@ -8,6 +8,15 @@
     <artifactId>mi-proyecto</artifactId> <!-- Cambia esto por tu nombre de proyecto -->
     <version>1.0.0</version>
 
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+
     <!-- Dependencias -->
     <dependencies>
         <!-- Dependencia de JUnit para realizar pruebas unitarias -->
