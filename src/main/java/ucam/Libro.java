@@ -1,4 +1,4 @@
-package biblioteca;
+package ucam;
 
 public class Libro {
     private String titulo;
