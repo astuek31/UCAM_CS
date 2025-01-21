@@ -19,7 +19,7 @@
     <repositories>
         <repository>
             <id>plugins</id>
-            <url>https://repo1.maven.org/maven2/com/github/</url>
+            <url>https://repo1.maven.org/maven2</url>
         </repository>
     </repositories>
 
