@@ -51,7 +51,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Plugin de SpotBugs -->
+            <!-- Plugin de SpotBugs1 -->
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
