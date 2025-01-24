@@ -70,7 +70,7 @@
                 </executions>
             </plugin>
 
-            <!-- Plugin para publicar artefactos en el directorio local -->
+            <!-- Plugin para publicar artefactos en el directorio local 1-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
