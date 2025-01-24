@@ -37,7 +37,7 @@
         </dependency>
     </dependencies>
 
-    <!-- Configuración de compilación 1-->
+    <!-- Configuración de compilación -->
     <build>
         <plugins>
             <!-- Plugin de compilación de Maven -->
@@ -77,3 +77,5 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 </project>
+
+        <!-- Modificación para pruebas commit y push -->
