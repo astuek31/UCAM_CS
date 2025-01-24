@@ -6,7 +6,7 @@
     <!-- Información básica del proyecto -->
     <groupId>com.tu.proyecto</groupId>
     <artifactId>mi-proyecto</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <repositories>
         <repository>
