@@ -37,7 +37,7 @@
         </dependency>
     </dependencies>
 
-    <!-- Configuración de compilación -->
+    <!-- Configuración de compilación 1-->
     <build>
         <plugins>
             <!-- Plugin de compilación de Maven -->
