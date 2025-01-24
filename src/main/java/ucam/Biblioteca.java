@@ -15,6 +15,6 @@ public class Biblioteca {
     }
 
     public List<Libro> listarLibros() {
-        return new ArrayList<>(libros); // Devuelve una copia de la lista
+        return libros;
     }
 }
